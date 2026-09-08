@@ -4,9 +4,9 @@
 
    :root {
   --bg-color: #000000;         /* Baggrundsfarve på siden */
-  --card-bg: #ffffff;          /* Baggrundsfarve på kort/blokke */
-  --primary-color: #25c202;    /* Hovedfarve (knapper, badges, links) */
-  --text-color: #000000;       /* Tekstfarve */
+  --card-bg: hsl(0, 0%, 100%);          /* Baggrundsfarve på kort/blokke */
+  --primary-color: #000000;    /* Hovedfarve (knapper, badges, links) */
+  --text-color: #0d0d0d;       /* Tekstfarve */
   --text-muted: #64748b;      /* Sekundær tekstfarve */
   --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --border-radius: 8px;        /* Hvor afrundede hjørnerne skal være */
@@ -106,8 +106,8 @@ body {
 
 /* Kodeblokke */
 pre {
-  background: #52e23f;
-  color: #ffffff;
+  background: #000000;
+  color: #33ff00;
   padding: 1rem;
   border-radius: 10px;
   overflow-x: auto;
