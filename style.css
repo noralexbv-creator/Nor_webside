@@ -1,0 +1,134 @@
+/* =========================================================
+   ELEVTILPASNING: Ændr farver og skrifttyper i feltet herunder
+   ========================================================= */
+
+   :root {
+  --bg-color: #000000;         /* Baggrundsfarve på siden */
+  --card-bg: #ffffff;          /* Baggrundsfarve på kort/blokke */
+  --primary-color: #25c202;    /* Hovedfarve (knapper, badges, links) */
+  --text-color: #000000;       /* Tekstfarve */
+  --text-muted: #64748b;      /* Sekundær tekstfarve */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --border-radius: 8px;        /* Hvor afrundede hjørnerne skal være */
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  line-height: 1.6;
+}
+
+/* Layout Container */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(255, 2, 2, 0.05);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Hero Header */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: var(--card-bg);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Modulære Kort / Blokke */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1);
+}
+
+.section-title {
+  margin: 2rem 0 1rem 0;
+}
+
+/* Projekt-specifik stilarter */
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.badge {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.date {
+  margin-left: auto;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Kodeblokke */
+pre {
+  background: #52e23f;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+/* Knapper */
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
