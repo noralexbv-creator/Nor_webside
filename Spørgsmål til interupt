@@ -1,0 +1,22 @@
+link til chat snak: https://chatgpt.com/share/6aabe5c8-2620-83ed-960c-c844f77c56c1 
+
+Hvad betyder det for program afviklingen at der er en 10 s. pause? Ud fra hvad I observere
+At hvert 10 s. printer terminalen hvilken status knapppen er i.
+
+Hvad er forskellen på de to programmer? Ud fra hvad I observere.
+I den sidste kan der ikke opstå fejl pågrund af bounce.
+
+Hvad er en interrupt? Ud fra hvad I observere og måske efterfølgende spørg chat
+interupt stopper en del af koden hvis en betingelse bliver mødt.
+
+Hvordan implementerer man en interrupt? spørg chat
+se link.
+
+Hvad går galt når I implementerer en knap uden interrupt? Ud fra hvad I observere
+der kan komme bounce hvor at knappen hopper op og ned, hvilket leder til at terminalen printer flere gange selvom man kun trykker engang på knappen.
+
+Hvad går galt når I implementerer en knap uden debounce? Ud fra hvad I observere
+der kan komme bounce hvor at knappen hopper op og ned, hvilket leder til at terminalen printer flere gange selvom man kun trykker engang på knappen
+
+Hvordan håndterer man bounce under interrupts? spørg chat
+se link
