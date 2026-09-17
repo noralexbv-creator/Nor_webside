@@ -1,0 +1,39 @@
+from machine import Pin
+import neopixel
+from time import sleep
+
+
+
+button = Pin(11, Pin.IN, Pin.PULL_UP)
+# Timing til WS2812B-MINI-V6
+timing_v6 = (300, 950, 700, 600)
+antal_led = 5
+np = neopixel.NeoPixel(
+    Pin(10, Pin.OUT),
+    antal_led,
+    bpp=3,
+    timing=timing_v6
+)
+
+while True:
+    
+    buttonStatus = button.value()
+    if buttonStatus == 0:
+
+        np.fill((255, 255, 255))
+        np.write()
+        sleep(1)
+    
+    else:
+    
+        np.fill((0, 0, 0))
+        np.write()
+        sleep(1)
+    
+    
+    # 
+    # Rød
+
+# Send data til LED'erne
+        np.write()
+        sleep(0.5)
