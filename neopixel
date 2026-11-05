@@ -1,0 +1,26 @@
+from machine import Pin
+from time import sleep
+import neopixel
+
+knap = Pin(11,Pin.IN, Pin.PULL_UP)
+
+antal_led = 16
+timing_v6 = (300, 950, 700, 600)
+
+np = neopixel.NeoPixel(
+    Pin(10, Pin.OUT),
+    antal_led,
+    bpp=3,
+    timing=timing_v6
+)
+
+while True:
+    if knap.value() == 0:
+        for i in range(antal_led):
+         np[i] = (255, 0, 0)
+         np.write()
+    else:
+        np.fill((0, 0, 0))
+        np.write()
+
+sleep(0.1)
