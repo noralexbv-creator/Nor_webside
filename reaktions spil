@@ -1,0 +1,46 @@
+import time
+from machine import Pin
+import random 
+
+redLed = Pin(7,Pin.OUT)
+greenLed = Pin(15,Pin.OUT)
+blueLed = Pin(5,Pin.OUT)
+
+redButton = Pin(41, Pin.IN, Pin.PULL_UP)
+greenButton = Pin(42, Pin.IN, Pin.PULL_UP)
+blueButton = Pin(2, Pin.IN, Pin.PULL_UP)
+
+LEDList = [redLed, greenLed, blueLed]
+
+def valgLed ():
+  nrLed = random.randint (0, 2)
+  return nrLed
+
+
+def ButtonPressed ():
+  while True:
+    redButtonStatus = Pin.value(redButton)
+    greenButtonStatus = Pin.value(greenButton)
+    blueButtonStatus = Pin.value(blueButton)
+
+    if redButtonStatus == 0:
+      return 0
+
+    if greenButtonStatus == 0:
+      return 1
+  
+    if blueButtonStatus == 0:
+      return 2
+    
+  
+nrLed = valgLed()
+Pin.value(LEDList[nrLed], 1)
+startTid = time.ticks_ms()
+knap = ButtonPressed()
+
+if knap == nrLed:
+  slutTid = time.ticks_ms()
+  print(slutTid - startTid)
+ 
+else:
+ print("forkert")
